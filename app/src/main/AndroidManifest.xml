@@ -3,6 +3,7 @@
     package="com.thiagosalper.cleanstore">
 
     <application
+        android:name=".CleanStoreApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
