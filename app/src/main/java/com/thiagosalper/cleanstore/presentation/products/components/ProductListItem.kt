@@ -1,6 +1,5 @@
 package com.thiagosalper.cleanstore.presentation.products.components
 
-import android.graphics.Color
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -11,11 +10,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import com.thiagosalper.cleanstore.domain.model.Product
 
 @Composable
@@ -26,7 +25,7 @@ fun ProductListItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onItemClick(Product) }
+            .clickable { onItemClick(product) }
             .padding(20.dp),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
@@ -37,7 +36,7 @@ fun ProductListItem(
         )
         Text(
             text = "${product.price}",
-            color = Color.RED,
+            color = Color.Red,
             fontStyle = FontStyle.Italic,
             textAlign = TextAlign.End,
             style = MaterialTheme.typography.body2,
